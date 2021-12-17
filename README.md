@@ -1,6 +1,8 @@
 # Virbe Being Core [Open Source]
 
-Check out our [documentation](https://docs.virbe.ai) to see how to: 
+**Latest version: 0.5.0**
+
+Check out our [documentation](https://docs.virbe.ai) to see how to 
 * Start Virbe Being Core to give your being intelligence and consume it with one of our SDKs
   * _You will need to create Dialogflow chatbot, obtain Google Speech API and Amazon Polly keys_
   * **If it sounds too complicated you might want to check out our [Virbe Beings Cloud](https://hub.virbe.app/)**
@@ -13,3 +15,10 @@ Check out our [documentation](https://docs.virbe.ai) to see how to:
    1. You might want to start by coping `.env.sample` to `.env` 
 3. Launch your Virbe Being Core with `./up.sh` script
 4. Continue integration in Unity Engine accordingly to documentation found in our documentation on [Unity SDK](https://docs.virbe.ai/deploy-being/unity) 
+
+## License
+Licensed under the Apache License, Version 2.0.
+Copyright 2021 Virbe Sp. z o.o. [Copy of the license](LICENSE).
+
+## About Company
+### To learn more about [Virbe](https://virbe.ai) Check out our [website](https://virbe.ai)
