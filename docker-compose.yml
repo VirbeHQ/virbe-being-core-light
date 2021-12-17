@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  chat-api:
+    image: virbe/virbe-chat-api-light:${VERSION}
+    ports:
+      - 8888:8888
+    environment:
+      INTERFACE: 0.0.0.0
+      PORT: 8888
+      APP_ENVIRONMENT: ${APP_ENVIRONMENT}
+      API_KEY: ${INTENRAL_API_KEY}
+      DOCS_ENABLED: "true"
+      CHAT_API_KEY: ${CHAT_API_KEY}
+      CHAT_STT_LANGUAGE: ${CHAT_STT_LANGUAGE}
+      CHAT_TTS_SUPPORT_SSML: "true"
+      CHAT_TTS_VOICE: ${CHAT_TTS_VOICE}
+      CHAT_ORIGINS: ${DOMAIN_ORIGIN}
+      CHAT_ENGINE: google-dialogflow
+      CHAT_ENGINE_ORIGIN: http://google-dialogflow:9001
+      CHAT_STT_ORIGIN: http://google-stt:9002
+      CHAT_TTS_ORIGIN: http://amazon-polly:9003
+
+  google-dialogflow:
+    image: virbe/virbe-chatbot-engine-google-dialogflow:${VERSION}
+    environment:
+      INTERFACE: 0.0.0.0
+      PORT: 9001
+      API_KEY: ${DIALOGFLOW_API_KEY}
+      PROJECT_ID: ${DIALOGFLOW_PROJECT_ID}
+           
+  google-stt:
+    image: virbe/virbe-stt-engine-google-stt:${VERSION}
+    environment:
+      INTERFACE: 0.0.0.0
+      PORT: 9002
+      APP_ENVIRONMENT: ${APP_ENVIRONMENT}
+      STT_API_KEY: ${GOOGLE_STT_API_KEY}
+      
+  amazon-polly:
+    image: virbe/virbe-tts-engine-amazon-polly:${VERSION}
+    environment:
+      INTERFACE: 0.0.0.0
+      PORT: 9003
+      APP_ENVIRONMENT: ${APP_ENVIRONMENT}
+      AWS_POLLY_REGION: ${AWS_POLLY_REGION}
+      AWS_POLLY_ACCESS_KEY_ID: ${AWS_POLLY_ACCESS_KEY_ID}
+      AWS_POLLY_SECRET_ACCESS_KEY: ${AWS_POLLY_SECRET_ACCESS_KEY}
