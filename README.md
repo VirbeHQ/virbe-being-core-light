@@ -15,6 +15,12 @@ Check out our [documentation](https://docs.virbe.ai) to see how to
    1. You might want to start by coping `.env.sample` to `.env` 
 3. Launch your Virbe Being Core with `./up.sh` script
 4. Continue integration in Unity Engine accordingly to documentation found in our documentation on [Unity SDK](https://docs.virbe.ai/deploy-being/unity) 
+## Community support
+
+For general help using this project, please refer to [the official Virbe documentation](https://docs.virbe.ai/). For additional help, you can use one of these channels to ask a question:
+
+- [Discord](https://discord.gg/M42WtfqM2n) (For live discussion with the Community and Virbe team)
+- Contact our team on through [our website](https://virbe.ai#contact)
 
 ## License
 Licensed under the Apache License, Version 2.0.
